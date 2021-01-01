@@ -52,3 +52,5 @@ gem 'mock_redis'
 gem 'paranoia'
 gem 'pundit'
 gem 'redis-rails'
+
+gem 'rack-cors'
