@@ -14,8 +14,7 @@ class ApplicationController < ActionController::API
   private
 
   def set_session
-    authenticate_with_http_token do |token, _options|
-      @session = Session.get(token)
-    end
+    token = cookies['token']
+    @session = Session.get(token)
   end
 end

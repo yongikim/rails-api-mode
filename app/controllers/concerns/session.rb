@@ -10,7 +10,7 @@ module Session
       token,
       user_id: user.id
     )
-    REDIS.expire(token, 1.week)
+    REDIS.expire(token, 2.day)
 
     token
   end

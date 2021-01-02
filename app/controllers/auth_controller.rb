@@ -1,6 +1,7 @@
 class AuthController < ApplicationController
   skip_before_action :require_login, only: [:create]
 
+  # POST /auth
   def create
     user = User.find_by(email: params[:email])
     token = ''
