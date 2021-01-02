@@ -8,6 +8,7 @@ class AuthController < ApplicationController
     if user&.authenticate(params[:password])
       token = Session.create(user)
       status = :created
+      cookies['token'] = { value: token, httponly: true }
     end
     render json: { token: token }, status: status
   end
