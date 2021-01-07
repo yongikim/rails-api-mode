@@ -11,6 +11,10 @@ class ApplicationController < ActionController::API
     render json: { error: 'unauthorized' }, status: :unauthorized if @session.empty?
   end
 
+  def current_user
+    @current_user ||= User.find(@session['user_id'])
+  end
+
   private
 
   def set_session
