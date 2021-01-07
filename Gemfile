@@ -54,3 +54,6 @@ gem 'pundit'
 gem 'redis-rails'
 
 gem 'rack-cors'
+
+gem 'grape'
+gem 'grape-entity'
