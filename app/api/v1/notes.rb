@@ -1,7 +1,5 @@
 module V1
   class Notes < Grape::API
-    before { authenticate! }
-
     resources :notes do
       desc 'get all notes'
       get '/' do

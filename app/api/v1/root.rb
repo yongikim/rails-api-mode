@@ -1,5 +1,7 @@
 module V1
   class Root < Grape::API
+    before { authenticate! }
+
     version :v1
     format :json
 
